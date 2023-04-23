@@ -24,7 +24,7 @@
                             Название: <input name="name" type="text" value="{{ $task -> name }}">
                         </div>
                         <div>
-                            Описание: <input name="name" type="text" value="{{ $task -> description }}">
+                            Описание: <input name="description" type="text" value="{{ $task -> description }}">
                         </div>
                         <button name="update" class="rounded-lg p-2 mt-4" style="margin-left: 60px; background-color: rgb(249 115 22);">Сохранить</button>
                     </form>

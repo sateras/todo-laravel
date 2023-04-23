@@ -32,7 +32,8 @@ Route::middleware([
 
         Route::post('/task', [TasksController::class, 'create']);
 
-        Route::get('/task/{task}', [TasksController::class, 'show']);
+        Route::get('/task/{task}', [TasksController::class, 'show']
+        )->name('show');
 
         Route::get('/task/{task}/edit', [TasksController::class, 'edit']);
 

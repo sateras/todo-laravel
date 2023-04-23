@@ -67,6 +67,7 @@ class TasksController extends Controller
 
     public function update(Request $request, Task $task)
     {
+        
     	if(isset($_POST['delete'])) {
     		$task->delete();
     		return redirect('/dashboard');
@@ -79,7 +80,7 @@ class TasksController extends Controller
             $task->name = $request->name;
     		$task->description = $request->description;
 	    	$task->save();
-	    	return redirect('/dashboard'); 
+	    	return redirect()->route('show', [$task]); 
     	}    	
     }
 }
